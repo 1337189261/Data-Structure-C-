@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "BiTNode.hpp"
+
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    BiTree tree;
+    CreateBiTree(tree);
+    InOrderTraversal(tree, PrintElement);
     return 0;
 }

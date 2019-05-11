@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5308E73422868E8500DB470F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5308E73322868E8500DB470F /* main.cpp */; };
+		5308E73C22868ECD00DB470F /* BiTNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5308E73A22868ECD00DB470F /* BiTNode.cpp */; };
+		5308E74022868F2400DB470F /* Stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5308E73E22868F2400DB470F /* Stack.cpp */; };
+		5308E74422871DE000DB470F /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5308E74222871DE000DB470F /* Graph.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,13 @@
 /* Begin PBXFileReference section */
 		5308E73022868E8500DB470F /* Data Structure C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Data Structure C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5308E73322868E8500DB470F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5308E73A22868ECD00DB470F /* BiTNode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BiTNode.cpp; sourceTree = "<group>"; };
+		5308E73B22868ECD00DB470F /* BiTNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BiTNode.hpp; sourceTree = "<group>"; };
+		5308E73D22868F1200DB470F /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		5308E73E22868F2400DB470F /* Stack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stack.cpp; sourceTree = "<group>"; };
+		5308E73F22868F2400DB470F /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		5308E74222871DE000DB470F /* Graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
+		5308E74322871DE000DB470F /* Graph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +67,24 @@
 		5308E73222868E8500DB470F /* Data Structure C++ */ = {
 			isa = PBXGroup;
 			children = (
+				5308E74122871D3E00DB470F /* Stack */,
 				5308E73322868E8500DB470F /* main.cpp */,
+				5308E73A22868ECD00DB470F /* BiTNode.cpp */,
+				5308E73B22868ECD00DB470F /* BiTNode.hpp */,
+				5308E73D22868F1200DB470F /* Macro.h */,
+				5308E74222871DE000DB470F /* Graph.cpp */,
+				5308E74322871DE000DB470F /* Graph.hpp */,
 			);
 			path = "Data Structure C++";
+			sourceTree = "<group>";
+		};
+		5308E74122871D3E00DB470F /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				5308E73E22868F2400DB470F /* Stack.cpp */,
+				5308E73F22868F2400DB470F /* Stack.hpp */,
+			);
+			path = Stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5308E74422871DE000DB470F /* Graph.cpp in Sources */,
 				5308E73422868E8500DB470F /* main.cpp in Sources */,
+				5308E73C22868ECD00DB470F /* BiTNode.cpp in Sources */,
+				5308E74022868F2400DB470F /* Stack.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
