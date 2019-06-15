@@ -21,6 +21,6 @@ typedef struct
 }Graph;
 
 Status CreateGraph (Graph &G);
-void DFSTraverse(Graph &G, Status(* Visit)(int v));
+void DFSTraverse(Graph &G);
 
 #endif /* Graph_hpp */

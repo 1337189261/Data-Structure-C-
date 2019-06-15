@@ -8,13 +8,10 @@
 
 #include <iostream>
 #include "BiTNode.hpp"
-
+#include "Graph.hpp"
+#include "LinkList.hpp"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    
-    BiTree tree;
-    CreateBiTree(tree);
-    InOrderTraversal(tree, PrintElement);
     return 0;
 }

@@ -22,13 +22,13 @@ typedef struct {
     SElemType *base;
     SElemType *top;
     int stacksize;
-}SqStack;
+}BiTreeStack;
 
-Status InitStack(SqStack &S);
-Status GetTop(SqStack S, SElemType &e);
-Status Push(SqStack &S, SElemType e);
-Status Pop(SqStack &S, SElemType &e);
-Status StackEmpty(SqStack S);
+Status InitStack(BiTreeStack &S);
+Status GetTop(BiTreeStack S, SElemType &e);
+Status Push(BiTreeStack &S, SElemType e);
+Status Pop(BiTreeStack &S, SElemType &e);
+Status StackEmpty(BiTreeStack S);
 
 
 #endif /* Stack_hpp */

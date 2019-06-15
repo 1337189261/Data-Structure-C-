@@ -6,10 +6,10 @@
 //  Copyright © 2019 陈浩宇. All rights reserved.
 //
 
-#include "Stack.hpp"
+#include "BiTreeStack.hpp"
 #include <cstdlib>
 
-Status InitStack(SqStack &S) {
+Status InitStack(BiTreeStack &S) {
     S.base = (SElemType *)malloc(STACK_INIT_SIZE * sizeof(SElemType));
     if (!S.base) {
         exit(OVERFLOW);
@@ -19,7 +19,7 @@ Status InitStack(SqStack &S) {
     return OK;
 }
 
-Status GetTop(SqStack S, SElemType &e) {
+Status GetTop(BiTreeStack S, SElemType &e) {
     if (S.top == S.base) {
         return ERROR;
     }
@@ -27,7 +27,7 @@ Status GetTop(SqStack S, SElemType &e) {
     return OK;
 }
 
-Status Push(SqStack &S, SElemType e) {
+Status Push(BiTreeStack &S, SElemType e) {
     if (S.top - S.base >= S.stacksize) {
         S.base = (SElemType *)malloc((S.stacksize + STACKINCREMENT) * sizeof(SElemType));
         if (!S.base) {
@@ -40,7 +40,7 @@ Status Push(SqStack &S, SElemType e) {
     return OK;
 }
 
-Status Pop(SqStack &S, SElemType &e) {
+Status Pop(BiTreeStack &S, SElemType &e) {
     if (S.top == S.base) {
         return ERROR;
     }
@@ -48,7 +48,7 @@ Status Pop(SqStack &S, SElemType &e) {
     return OK;
 }
 
-Status StackEmpty(SqStack S) {
+Status StackEmpty(BiTreeStack S) {
     if (S.base == S.top) {
         return true;
     } else {

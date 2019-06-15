@@ -9,7 +9,6 @@
 #include "Graph.hpp"
 
 int visited[MAX_NUMBER];
-Status (*VisitFunc)(int v);
 
 int FirstAdjvex(Graph G, int v) {
     for (int i = 0;i < G.vexnum; i ++) {
@@ -44,15 +43,14 @@ Status LocateAdj(Graph G, char c) {
 void DFS(Graph &G, int &v) {
     int w;
     visited[v] = TRUE;
-    VisitFunc(v);
+    Visit(v);
     for (w = FirstAdjvex(G, v); w >= 0; w = NextAdjvex(G,v,w)) {
         if (!visited[w]) DFS(G,w);
     }
 }
 
-void DFSTraverse(Graph &G, Status(* Visit)(int v)) {
+void DFSTraverse(Graph &G) {
     printf("开始遍历\n");
-    VisitFunc = Visit;
     // 初始化数组
     for (int v = 0; v < G.vexnum; ++v){
         visited[v] = FALSE;
@@ -62,9 +60,6 @@ void DFSTraverse(Graph &G, Status(* Visit)(int v)) {
 }
 
 Status CreateGraph (Graph &G) {
-    for (int i = 0; i < MAX_NUMBER; i++) {
-        visited[i] = false;
-    }
     printf("请输入顶点数量\n");
     scanf("%d",&G.vexnum);
     printf("请输入弧的数量\n");

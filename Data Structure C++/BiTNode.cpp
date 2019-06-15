@@ -7,7 +7,7 @@
 //
 
 #include "BiTNode.hpp"
-#include "Stack.hpp"
+#include "BiTreeStack.hpp"
 #include <cstdlib>
 #include <iostream>
 
@@ -28,7 +28,7 @@ Status PreOrderTraverse(BiTree T, Status(* Visit)(TElemType e)) {
 }
 
 Status InOrderTraversal(BiTree T, Status(* Visit)(TElemType e)) {
-    SqStack S;
+    BiTreeStack S;
     BiTree p = T;
     InitStack(S);
     while (p || !StackEmpty(S)) {
